@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Cañas | Experiencia Sostenible</title>
+    <link rel="icon" type="image/png" href="assets/Logo.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="contact-info">
+                <img src="assets/Logo.png" alt="Logo QR" style="height: 30px; width: auto; margin-right: 15px; vertical-align: middle;">
+                <a href="#" target="_blank"><i class="fas fa-map-marker-alt"></i> 100m Norte del Parque Central, Cañas</a>
+                <a href="tel:+50689794005"><i class="fas fa-phone-alt"></i> (+506) 8979-4005</a>
+            </div>
+            
+            <div class="user-access">
+                <button class="btn-loyalty" id="loyaltyTrigger">
+                    <i class="fas fa-crown"></i> Mi Portal <span>(150 pts)</span>
+                </button>
+            </div>
+
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <header class="hero-impact">
+        <video autoplay muted loop playsinline id="hero-video">
+            <source src="assets/PlayaVideo1.mp4" type="video/mp4">
+        </video>
+        <div class="layer-overlay"></div>
+        
+        <div class="hero-content-impact">
+            <img src="assets/Logo.png" alt="Logo QR Innovations" style="max-width: 150px; margin-bottom: 20px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));">
+            <div class="logo-top">QR INNOVATIONS | <span>Hotel Cañas</span></div>
+            <h1>Tu refugio sostenible.</h1>
+            <p>Donde la energía limpia alimenta sus sueños en el corazón de Guanacaste.</p>
+            <a href="#rooms" class="btn-wow">Explorar Estancias</a>
+        </div>
+
+        <div class="scroll-down-wrapper" id="scrollArrow">
+            <span>Comience su viaje</span>
+            <div class="icon-scroll"></div>
+        </div>
+    </header>
+
+    <section id="rooms" class="section-rooms">
+        <div class="container">
+            <span class="pre-title">Estancias de Clase Mundial</span>
+            <h2 class="main-title">Elegancia Consciente</h2>
+            <div class="rooms-grid">
+                <div class="room-card-premium">
+                    <div class="room-img-wrapper">
+                        <img src="assets/305399201.jpg" alt="Executive">
+                        <div class="room-badge">Más buscada</div>
+                    </div>
+                    <div class="room-details">
+                        <h3>Executive Comfort</h3>
+                        <p>Productividad y confort con WiFi de alta velocidad para el viajero moderno.</p>
+                        <div class="room-footer">
+                            <span class="price">₡16.500<small>/noche</small></span>
+                            <button class="btn-book-gold">Disponibilidad</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-card-premium featured">
+                    <div class="room-img-wrapper">
+                        <img src="assets/373842925.jpg" alt="Eco-Luxe">
+                        <div class="room-badge-gold">Recomendada</div>
+                    </div>
+                    <div class="room-details">
+                        <h3>Eco-Luxe Suite</h3>
+                        <p>Descanso premium alimentado 100% por el sol de Guanacaste.</p>
+                        <div class="room-footer">
+                            <span class="price">₡27.000<small>/noche</small></span>
+                            <button class="btn-book-gold">Reservar Suite</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-card-premium">
+                    <div class="room-img-wrapper">
+                        <img src="assets/730682092.jpg" alt="Family">
+                    </div>
+                    <div class="room-details">
+                        <h3>Family Hub</h3>
+                        <p>Espacio optimizado para grupos y seguridad total para su familia.</p>
+                        <div class="room-footer">
+                            <span class="price">₡22.000<small>/noche</small></span>
+                            <button class="btn-book-gold">Ver Espacios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            
+            <div id="step1-calendar">
+                <div class="modal-header">
+                    <h3>Reserve su Experiencia</h3>
+                    <p>Seleccione sus fechas de estancia</p>
+                </div>
+                <div class="booking-grid">
+                    <div class="calendar-wrapper">
+                        <div class="calendar-header">
+                            <span>Marzo 2026</span>
+                        </div>
+                        <div class="calendar-days">
+                            <span>D</span><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span>
+                            <div class="days-grid">
+                                <span class="past">1</span><span class="past">2</span><span class="past">3</span><span class="past">4</span><span class="past">5</span><span class="past">6</span><span class="past">7</span>
+                                <span class="past">8</span><span class="current">9</span><span class="selected">10</span><span class="selected">11</span><span>12</span><span>13</span><span>14</span>
+                                <span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span>
+                                <span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="booking-form">
+                        <div class="form-group">
+                            <label>Huéspedes</label>
+                            <select>
+                                <option>2 Adultos</option>
+                                <option>2 Adultos, 1 Niño</option>
+                                <option>3 Adultos</option>
+                            </select>
+                        </div>
+                        <div class="price-summary">
+                            <div class="row"><span>₡27.000 x 2 noches</span> <span>₡54.000</span></div>
+                            <div class="row"><span>Cargos por servicio</span> <span>₡0</span></div>
+                            <div class="row total"><span>Total Estancia</span> <span>₡54.000</span></div>
+                        </div>
+                        <button type="button" class="btn-finalize" onclick="goToStep2()">Confirmar y Pagar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="confirmationStep" class="confirm-container" style="display:none;">
+                <div class="confirm-grid">
+                    <div class="guest-details">
+                        <h2>Casi listo, <span class="gold-text">asegure su lugar</span></h2>
+                        <p class="subtitle">Complete sus datos para finalizar la reserva.</p>
+                        <form class="premium-form">
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label>Nombre Completo</label>
+                                    <input type="text" placeholder="Ej. Juan Pérez">
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label>Correo Electrónico</label>
+                                    <input type="email" placeholder="nombre@ejemplo.com">
+                                </div>
+                                <div class="input-group">
+                                    <label>Teléfono</label>
+                                    <input type="tel" placeholder="+506 0000 0000">
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Peticiones Especiales (Opcional)</label>
+                                <textarea placeholder="¿Alguna alergia o preferencia de habitación?"></textarea>
+                            </div>
+                            <div class="payment-notice">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Pago seguro al llegar al hotel. No solicitamos tarjeta ahora.</span>
+                            </div>
+                            <button type="button" class="btn-finalize" onclick="showSuccess()">Finalizar Reserva</button>
+                        </form>
+                    </div>
+                    <div class="booking-summary-card">
+                        <div class="summary-img" style="background-image: url('assets/373842925.jpg');">
+                            <span class="price-tag">₡27.000 / noche</span>
+                        </div>
+                        <div class="summary-content">
+                            <h3>Eco-Luxe Suite</h3>
+                            <div class="summary-info">
+                                <div class="info-item"><i class="fas fa-calendar-check"></i> <span>10 Mar - 12 Mar (2 noches)</span></div>
+                                <div class="info-item"><i class="fas fa-users"></i> <span>2 Adultos</span></div>
+                                <div class="info-item"><i class="fas fa-leaf"></i> <span>Estancia Sostenible</span></div>
+                            </div>
+                            <div class="total-block">
+                                <div class="total-row"><span>Subtotal</span><span>₡54.000</span></div>
+                                <div class="total-row total-price"><span>Total</span><span>₡54.000</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="successStep" class="success-container" style="display:none;">
+                <div class="success-content">
+                    <div class="swal-icon-shaking">
+                        <i class="fas fa-check-circle" style="font-size: 60px; color: #22c55e;"></i>
+                    </div>
+                    <h2>¡Reserva Confirmada!</h2>
+                    <p>Todo está listo para su llegada al <strong>Hotel Cañas</strong>.</p>
+                    <div class="ticket-summary" style="background: #f8fafc; padding: 20px; border-radius: 15px; margin: 20px 0; border: 2px dashed #ddd;">
+                        <div class="ticket-header">
+                            <span>Código de Reserva:</span>
+                            <strong style="color: var(--gold);">#QR-2026-HC</strong>
+                        </div>
+                    </div>
+                    <div class="success-actions">
+                        <button class="btn-finalize" onclick="location.reload()">Regresar al Inicio</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loyaltyModal" class="modal">
+        <div class="modal-content loyalty-card">
+            <span class="close-modal">&times;</span>
+            <div class="loyalty-header">
+                <div class="user-badge">Socio Oro</div>
+                <h2>¡Bienvenido, Juan Pérez!</h2>
+                <p>Tienes **150 puntos** acumulados.</p>
+            </div>
+            <div class="points-bar">
+                <div class="progress" style="width: 75%;"></div>
+                <span>Faltan 50 pts para una **Noche Gratis**</span>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <i class="fas fa-coffee"></i>
+                    <span>Desayuno Gratis</span>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Late Check-out</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="metricsModal" class="modal">
+        <div class="modal-content metrics-bg">
+            <span class="close-modal">&times;</span>
+            <div class="metrics-header">
+                <h3>QR Dashboard | <span class="gold-text">Hotel Cañas</span></h3>
+                <p>Reporte en Tiempo Real</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <small>Reservas hoy</small>
+                    <strong>12</strong>
+                </div>
+                <div class="stat-card">
+                    <small>Ingresos</small>
+                    <strong>₡1.250.000</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
