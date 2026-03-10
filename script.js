@@ -142,3 +142,14 @@ function showSuccess() {
         if (closeModal) closeModal.style.display = 'none';
     }
 }
+
+function toggleCardFields(show) {
+    const cardFields = document.getElementById('card-fields');
+    cardFields.style.display = show ? 'block' : 'none';
+}
+
+function toggleInvoiceFields() {
+    const check = document.getElementById('invoiceToggle');
+    const fields = document.getElementById('invoice-fields');
+    fields.style.display = check.checked ? 'block' : 'none';
+}

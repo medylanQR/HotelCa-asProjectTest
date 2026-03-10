@@ -503,3 +503,17 @@ h1 {
     height: auto !important;
     margin: 0 auto; /* Centrado perfecto */
 }
+
+/* Métodos de Pago */
+.method-options { display: flex; gap: 15px; margin-top: 10px; }
+.method-card { flex: 1; cursor: pointer; position: relative; }
+.method-card input { position: absolute; opacity: 0; }
+.method-content { 
+    border: 2px solid #eee; padding: 15px; border-radius: 12px; text-align: center;
+    transition: 0.3s; display: flex; flex-direction: column; gap: 8px;
+}
+.method-card input:checked + .method-content { border-color: var(--gold); background: #fdfbf7; color: var(--gold); }
+.method-content i { font-size: 1.2rem; }
+
+/* Switch Facturación */
+.switch-container { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; font-weight: 600; cursor: pointer; }

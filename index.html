@@ -152,9 +152,40 @@
                                 <div class="input-group"><label>Correo Electrónico</label><input type="email" placeholder="nombre@ejemplo.com"></div>
                                 <div class="input-group"><label>Teléfono</label><input type="tel" placeholder="+506 0000 0000"></div>
                             </div>
-                            <div class="input-group"><label>Peticiones Especiales</label><textarea placeholder="Opcional"></textarea></div>
-                            <div class="payment-notice"><i class="fas fa-shield-alt"></i><span>Pago seguro al llegar al hotel.</span></div>
-                            <button type="button" class="btn-finalize" onclick="showSuccess()">Finalizar Reserva</button>
+
+                            <div class="payment-methods" style="margin-top: 20px;">
+                                <label style="font-weight: 600; display: block; margin-bottom: 10px;">Método de Pago</label>
+                                <div class="method-options" style="display: flex; gap: 15px;">
+                                    <label class="method-card" style="flex: 1; border: 2px solid #eee; padding: 10px; border-radius: 10px; text-align: center; cursor: pointer;">
+                                        <input type="radio" name="pay-method" value="hotel" checked onclick="toggleCardFields(false)">
+                                        <div class="method-content"><i class="fas fa-hotel"></i><br><span>En el Hotel</span></div>
+                                    </label>
+                                    <label class="method-card" style="flex: 1; border: 2px solid #eee; padding: 10px; border-radius: 10px; text-align: center; cursor: pointer;">
+                                        <input type="radio" name="pay-method" value="card" onclick="toggleCardFields(true)">
+                                        <div class="method-content"><i class="fas fa-credit-card"></i><br><span>Tarjeta</span></div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div id="card-fields" style="display: none; margin-top: 15px; padding: 15px; background: #f8fafc; border-radius: 10px;">
+                                <div class="input-group"><label>Número de Tarjeta</label><input type="text" placeholder="0000 0000 0000 0000"></div>
+                                <div class="input-row">
+                                    <div class="input-group"><label>Vencimiento</label><input type="text" placeholder="MM/AA"></div>
+                                    <div class="input-group"><label>CVV</label><input type="text" placeholder="123"></div>
+                                </div>
+                            </div>
+
+                            <div class="billing-toggle" style="margin-top: 20px;">
+                                <label style="cursor: pointer; font-weight: 600; font-size: 0.9rem;">
+                                    <input type="checkbox" id="invoiceToggle" onclick="toggleInvoiceFields()"> ¿Desea Factura Electrónica?
+                                </label>
+                            </div>
+                            <div id="invoice-fields" style="display: none; margin-top: 15px; padding: 15px; border: 1px solid #eee; border-radius: 10px;">
+                                <div class="input-group"><label>Cédula</label><input type="text" placeholder="Física o Jurídica"></div>
+                                <div class="input-group"><label>Razón Social</label><input type="text" placeholder="Nombre legal"></div>
+                            </div>
+
+                            <button type="button" class="btn-finalize" style="margin-top: 20px;" onclick="showSuccess()">Finalizar Reserva</button>
                         </form>
                     </div>
                     <div class="booking-summary-card">
@@ -176,10 +207,8 @@
             <div id="successStep" class="success-container" style="display:none; text-align: center; padding: 40px;">
                 <i class="fas fa-check-circle" style="font-size: 70px; color: #22c55e; margin-bottom: 20px;"></i>
                 <h2>¡Reserva Confirmada!</h2>
-                <p>Todo listo para su llegada al <strong>Hotel Cañas</strong>.</p>
                 <div class="ticket-summary" style="background: #f8fafc; padding: 20px; border-radius: 15px; margin: 25px 0; border: 2px dashed #ddd;">
-                    <span>Código de Reserva:</span><br>
-                    <strong style="color: var(--gold); font-size: 1.2rem;">#QR-2026-HC</strong>
+                    <span>Código:</span> <strong style="color: var(--gold);">#QR-2026-HC</strong>
                 </div>
                 <button class="btn-finalize" onclick="location.reload()">Regresar al Inicio</button>
             </div>
@@ -198,7 +227,6 @@
             <div class="benefits-grid">
                 <div class="benefit-item active"><i class="fas fa-coffee"></i><span>Desayuno Gratis</span></div>
                 <div class="benefit-item"><i class="fas fa-clock"></i><span>Late Check-out</span></div>
-                <div class="benefit-item locked"><i class="fas fa-concierge-bell"></i><span>Upgrade</span></div>
             </div>
         </div>
     </div>
@@ -206,11 +234,10 @@
     <div id="metricsModal" class="modal">
         <div class="modal-content metrics-bg">
             <span class="close-modal">&times;</span>
-            <div class="metrics-header"><h3>Dashboard | <span class="gold-text">Hotel Cañas</span></h3></div>
+            <div class="metrics-header"><h3>QR Dashboard | <span class="gold-text">Hotel Cañas</span></h3></div>
             <div class="stats-grid">
-                <div class="stat-card"><small>Reservas hoy</small><strong>12</strong><span class="up">+15%</span></div>
-                <div class="stat-card"><small>Ingresos Marzo</small><strong>₡1.250.000</strong></div>
-                <div class="stat-card"><small>Lealtad</small><strong>85%</strong></div>
+                <div class="stat-card"><small>Reservas hoy</small><strong>12</strong></div>
+                <div class="stat-card"><small>Ingresos</small><strong>₡1.250.000</strong></div>
             </div>
         </div>
     </div>
