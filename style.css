@@ -517,3 +517,43 @@ h1 {
 
 /* Switch Facturación */
 .switch-container { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; font-weight: 600; cursor: pointer; }
+
+/* AJUSTE PARA MODAL DINÁMICO */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; top: 0; 
+    width: 100%; height: 100%; 
+    background-color: rgba(0,0,0,0.7);
+    align-items: center; 
+    justify-content: center;
+    overflow-y: auto; /* Permite scroll si el modal es más alto que la pantalla */
+    padding: 20px; /* Evita que el modal pegue a los bordes en celulares */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto; /* Centrado dinámico */
+    padding: 30px;
+    border-radius: 20px;
+    width: 95%;
+    max-width: 1100px;
+    position: relative;
+    max-height: 90vh; /* No deja que el modal sea más alto que el 90% de la pantalla */
+    overflow-y: auto; /* Scroll interno para el contenido */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Ajuste para que la tarjeta lateral no se mueva al scrollear el formulario */
+.confirm-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    align-items: start; /* Importante: alinea al inicio para que el resumen no se estire */
+}
+
+.booking-summary-card {
+    position: sticky;
+    top: 0;
+}

@@ -121,7 +121,7 @@ function goToStep2() {
     const step1 = document.getElementById('step1-calendar');
     const step2 = document.getElementById('confirmationStep');
     const modalContent = document.querySelector("#bookingModal .modal-content");
-
+    modalContent.scrollTop = 0;
     if (step1 && step2) {
         step1.style.display = 'none';
         step2.style.display = 'block';
